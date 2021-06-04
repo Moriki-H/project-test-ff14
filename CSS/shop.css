@@ -1,0 +1,282 @@
+body {
+  background: #ededed;
+  font-family: 'iconfont';
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 2409000 */
+  src: url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.eot');
+  src: url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.woff2') format('woff2'), url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.woff') format('woff'), url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.ttf') format('truetype'), url('http://at.alicdn.com/t/font_2409000_7xyogdn3218.svg#iconfont') format('svg');
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+header {
+  background: #0d0d0d;
+  height: 162px;
+  width: 100%;
+}
+header .head_top {
+  height: 30px;
+}
+header .head_top ul li {
+  height: 100%;
+  margin: 0 10px;
+  line-height: 30px;
+  color: #9a9a9a;
+}
+header .head_top ul li a {
+  color: #9a9a9a;
+}
+header .head_top ul li a:hover {
+  color: #fff;
+}
+header .head_bottom {
+  height: 76px;
+  padding: 10px;
+}
+header .head_bottom h1 {
+  margin-right: 20px;
+}
+header .head_bottom .search {
+  width: 315px;
+  height: 42px;
+  border: 1px solid #ce0f30;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+header .head_bottom .search input {
+  text-indent: 1em;
+  font-size: 16px;
+  line-height: 38px;
+  color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0);
+}
+header .head_bottom .search .icon {
+  height: 40px;
+  width: 40px;
+  background-color: #ce0f30;
+  text-align: center;
+}
+header .head_bottom .search .icon a {
+  color: #fff;
+  line-height: 40px;
+  font-size: 24px;
+}
+header .head_bottom .buy {
+  margin-top: 5px;
+  width: 187px;
+  height: 42px;
+  border: 1px solid #b00b27;
+  background-color: #ce0f30;
+}
+header .head_bottom .buy .buy_left {
+  width: 145px;
+  text-align: center;
+}
+header .head_bottom .buy .buy_left a {
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+}
+header .head_bottom .buy .buy_left a i {
+  margin-right: 5px;
+  font-size: 22px;
+}
+header .head_bottom .buy .buy_right {
+  width: 40px;
+  height: 42px;
+  margin-top: -1px;
+  margin-right: -1px;
+  border-left: 1px solid #b00b27;
+  text-align: center;
+  line-height: 42px;
+}
+header .head_bottom .buy .buy_right a {
+  color: #fff;
+  font-size: 20px;
+}
+header .nav {
+  height: 56px;
+  background-color: #000;
+  border-top: 1px solid #393031;
+}
+header .nav ul {
+  height: 100%;
+}
+header .nav ul li {
+  height: 100%;
+  margin-right: 30px;
+}
+header .nav ul li a {
+  line-height: 56px;
+  font-size: 16px;
+  color: #aaa;
+}
+.now {
+  background-color: #fff !important;
+  color: #b00b27 !important;
+}
+.banner {
+  width: 100%;
+  height: 500px;
+  cursor: pointer;
+  position: relative;
+}
+.banner .banner1,
+.banner .banner2,
+.banner .banner3,
+.banner .banner4,
+.banner .banner5,
+.banner .banner6 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+  transition: all 0.3s;
+}
+.banner .banner1 {
+  background: url(../img/banner1.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  display: block;
+}
+.banner .banner2 {
+  background: url(../img/banner2.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.banner .banner3 {
+  background: url(../img/banner3.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.banner .banner4 {
+  background: url(../img/banner4.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.banner .banner5 {
+  background: url(../img/banner5.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.banner .banner6 {
+  background: url(../img/banner6.jpg) no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+.banner .bannerbox {
+  height: 100%;
+  position: relative;
+  margin-top: -500px;
+}
+.banner .bannerbox .user {
+  height: 460px;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 3%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.banner .bannerbox .user .img_box {
+  margin: 50px auto 20px auto;
+  padding: 10px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid #7e7e7e;
+  overflow: hidden;
+}
+.banner .bannerbox .user .img_box img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.banner .bannerbox .user .text {
+  width: 100%;
+  text-align: center;
+}
+.banner .bannerbox .user .text p {
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+}
+.banner .bannerbox .user .userbtn {
+  background: #ce0f30;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.banner .bannerbox .num {
+  position: absolute;
+  bottom: 55px;
+  right: 0;
+}
+.banner .bannerbox .num span {
+  display: inline-block;
+  margin-left: 5px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.banner .footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.content {
+  display: block;
+  margin-top: 20px;
+}
+.content img {
+  width: 100%;
+}
+.forTop {
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+  border: 1px solid #e2e2e2;
+  display: none;
+}
+.forTop div {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+}
+footer {
+  margin-top: 50px;
+  width: 100%;
+}
+footer img {
+  width: 100%;
+}

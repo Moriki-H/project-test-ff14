@@ -1,0 +1,369 @@
+body {
+    @font-face {
+        font-family: 'iconfont';
+        /* project id 2409000 */
+        src: url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.eot');
+        src: url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.eot?#iefix') format('embedded-opentype'),
+            url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.woff2') format('woff2'),
+            url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.woff') format('woff'),
+            url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.ttf') format('truetype'),
+            url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.svg#iconfont') format('svg');
+    }
+
+    font-family: 'iconfont';
+}
+
+
+.bigbox {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    header {
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(0, 0, 0, .6);
+        position: relative;
+
+        .title {
+            position: absolute;
+            left: 110px;
+            top: 150px;
+            transform: translate(0%, -50%);
+            width: 80px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .leftbox {
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+
+        .rightbox {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            a {
+                display: inline-block;
+                position: relative;
+                width: 94px;
+                height: 30px;
+                border: 1px solid #3f3a89;
+                color: #756aff;
+                text-align: center;
+                line-height: 30px;
+                font-weight: 700;
+                transition: all .3s;
+
+                &:hover {
+                    background: #756aff;
+                    color: #333;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #3f3a89;
+
+                    &:hover {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #3f3a89;
+
+                    &:hover {
+                        display: none;
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 3px;
+                        height: 3px;
+                        background-color: #3f3a89;
+
+                        &:hover {
+                            display: none;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 3px;
+                        height: 3px;
+                        background-color: #3f3a89;
+
+                        &:hover {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .pay {
+                margin-left: 20px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .selectButton {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            background: url(./img/selectDown.png);
+            width: 191px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+
+
+        .selectBox {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            z-index: 3;
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            transition: all .4s;
+
+            .box {
+                position: relative;
+                height: 260px;
+                width: 100%;
+                background-color: #2e2e2e;
+
+
+                .left {
+                    height: 100%;
+                    width: 63%;
+                    float: left;
+                    padding: 25px 60px 30px 98px;
+
+                    .top {
+                        color: #fff;
+                        font-weight: 700;
+                        height: 35px;
+
+                        .action {
+                            float: left;
+
+                            span {
+                                color: #666;
+                            }
+                        }
+
+                        .more {
+                            float: right;
+                            color: #ccc;
+                        }
+                    }
+
+                    .shop {
+                        ul {
+                            display: flex;
+                            overflow-x: auto;
+                            width: 100%;
+                            height: 100%;
+
+                            li:nth-child(4) {
+                                margin: 0;
+                            }
+
+                            li {
+                                display: inline-block;
+                                margin-right: 10px;
+                                height: 80%;
+
+                                p {
+                                    line-height: 30px;
+                                    font-weight: 700;
+                                    color: #b2b2b2;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    overflow: hidden;
+                    float: left;
+                    background-color: #1f1f1f;
+                    height: 100%;
+                    width: 37%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .selectBottom {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 100%);
+                    background: url(./img/selectUp.png);
+                    width: 191px;
+                    height: 25px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .options {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 470px);
+            width: 700px;
+
+            a {
+                position: relative;
+                color: #756aff;
+                float: left;
+                width: 190px;
+                height: 43px;
+                text-align: center;
+                line-height: 43px;
+                border: 1px solid #3f3a89;
+                background: rgba(0, 0, 0, 0.8);
+                margin-top: 9px;
+                transition: all .3s;
+
+                &:hover {
+                    transform: translate(0, -5px);
+                }
+            }
+
+            .download {
+                width: 216px;
+                height: 62px;
+                margin: 0 52px;
+                position: relative;
+                overflow: hidden;
+
+                &:hover .download_top {
+                    transform: translate(0, 0);
+                }
+
+                .download_top {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0, -100%);
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: #fff;
+                    width: 216px;
+                    text-align: center;
+                    height: 62px;
+                    line-height: 62px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    transition: all .3s;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 140%);
+            width: 852px;
+            height: 237px;
+            background-image: url(./img/top.png);
+        }
+
+
+    }
+
+    .imgbox {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .videoBox {
+        z-index: 1;
+        top: 0;
+        right: 0;
+        height: 800px;
+        width: 100%;
+        overflow: hidden;
+        margin-top: -155px;
+
+        video {
+            height: 1000px;
+            width: 1560px;
+            overflow: hidden;
+
+            source {
+                width: 1560px;
+            }
+        }
+
+        .imgbox {
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                height: 100%;
+            }
+        }
+    }
+}

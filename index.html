@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《最终幻想14》FFXIV官方网站-「暗影之逆焰」好评开放 人气突破1800万MMORPG大作</title>
+    <link rel="stylesheet" href="./material/normalize.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <script src="../material/flexible.js"></script>
+</head>
+
+<body>
+    <div class="bigbox">
+        <!----------------------------------------------------------- head  ------------------------------------------------>
+        <header>
+            <!-- ------------------------------------------------------left  --------------------------------------------------->
+            <div class="leftbox">
+                <a href=""> <img src="./img/logo.png" alt=""></a>
+            </div>
+            <a href="" class="title">
+                <img src="./img/ffcadpa.png" alt="">
+            </a>
+            <!------------------------------------------------------ right ----------------------------------------------------------- -->
+            <div class="rightbox">
+                <a href="./shop.html" class="shop"><span>&#xe656; 商城</span></a>
+                <a href="./login.html" class="pay"><span>&#xe630; 注册</span></a>
+            </div>
+
+
+            <!------------------------------------------------------- 中间logo ------------------------------------------------------>
+            <div class="logo">
+                <img src="./img/logo1.png" alt="">
+            </div>
+
+
+            <!--------------------------------------------------------- 下拉部分 --------------------------------------------------------->
+            <div class="selectButton "></div>
+            <!------------------------------------------------------ selectOn -------------------------------------------------------------->
+            <div class="selectBox selecthidden">
+                <div class="box">
+                    <div class=" left">
+                        <div class="top">
+                            <div class="action">
+                                丨 活动 <span>EVENTS</span>
+                            </div>
+                            <a href="" class="more">
+                                MORE+
+                            </a>
+                        </div>
+                        <div class="shop">
+                            <ul>
+                                <li><a href=""><img src="./img/shop1.jpg" alt="">
+                                        <p>学院制服套已上架!</p>
+                                    </a></li>
+                                <li><a href=""><img src="./img/shop2.jpg" alt="">
+                                        <p>新道具上架：2020年猎蛋节系列</p>
+                                    </a></li>
+                                <li><a href=""><img src="./img/shop3.jpg" alt="">
+                                        <p>毛茸茸莫古力包好评发售中！</p>
+                                    </a></li>
+                                <li><a href=""><img src="./img/shop4.jpg" alt="">
+                                        <p>购买冒险录 立即体验最新版本内容！</p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="./img/selectRight.png" alt="">
+                    </div>
+                    <div class="selectBottom"></div>
+                </div>
+            </div>
+
+
+
+            <!----------------------------------------------------- 下方logo ---------------------------------------------------------->
+            <div class="content"></div>
+            <!-------------------------------------------------------- 选项 --------------------------------------------------------------->
+            <div class="options">
+                <a href="" class="home">进入官网</a>
+                <a href="" class="download">
+                    <img src="./img/download1.png" alt="">
+                    <span class="download_top">下载不了</span>
+                </a>
+                <a href="" class="present">领取新手礼包</a>
+            </div>
+        </header>
+        <!-------------------------------------------------------------- video  --------------------------------------------------------->
+        <div class="videoBox">
+            <video muted="muted" loop="loop" autoplay="autoplay">
+                <source src="./vindex0130_2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!----------------------------------------------------------------- foot  ------------------------------------------------------>
+        <div class="imgbox">
+            <img src="./img/footer.png" alt="">
+        </div>
+    </div>
+    <!----//////////////////////////////////////////////////////////////// 下拉功能//////////////////////////////////////////////////////// -->
+    <script>
+        let selectButton = document.querySelector('.selectButton')
+        let selectBox = document.querySelector('.selectBox')
+        let selectButtom = document.querySelector('.selectBottom')
+        console.log(selectButton);
+        selectButton.addEventListener('click', function () {
+            selectBox.style.height = '280px'
+        })
+        selectButtom.addEventListener('click', function () {
+            selectBox.style.height = '0px'
+        })
+    </script>
+</body>
+
+</html>

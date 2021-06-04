@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="./material/normalize.css">
+    <link rel="stylesheet" href="./CSS/shop.css">
+    <!-- <script src="./material/flexible.js"></script> -->
+</head>
+
+<body>
+
+    <header>
+        <!---------------------------------------------------------------- head  ------------------------------------------------------->
+        <div class="head_top w">
+            <ul class="fr">
+                <li class="fl">盛趣游戏商城欢迎您, 请<a href="./login.html"> 登录</a></li>
+                <li class="fl"><a href="./login.html">免费注册</a></li>
+                <li class="fl"><a href="">帮助中心</a></li>
+            </ul>
+        </div>
+        <div class="head_bottom w">
+            <div class="head_left fl">
+                <h1 class="fl"><a href="./shop.html"><img src="./img/shop_logo1.png" alt=""></a></h1>
+                <h2 class="fl"><a href="./index.html"><img src="./img/shop_logo2.png" alt=""></a></h2>
+            </div>
+            <div class="head_right fr">
+                <div class="search fl">
+                    <input type="text" placeholder="请输入关键字" class="fl">
+                    <div class="icon fr"><a href="">&#xe624;</a></div>
+                </div>
+                <div class="buy fr">
+                    <div class="buy_left fl"><a href=""><i>&#xe656;</i>购物车</a></div>
+                    <div class="buy_right fl"><a href="">&#xe658;</a></div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------- nav  -------------------------------------------------------->
+        <div class="nav">
+            <ul class="w">
+                <li class="fl"><a href="" style="color: #fff;">最终幻想14</a></li>
+                <li class="fl"><a href="">虚拟道具</a></li>
+                <li class="fl"><a href="">实物周边</a></li>
+                <li class="fl"><a href="">个人中心</a></li>
+            </ul>
+        </div>
+    </header>
+    <!----------------------------------------------------------------- banner ---------------------------------------------------------->
+    <div class="banner">
+        <div class="banner1 ban"></div>
+        <div class="banner2 ban"></div>
+        <div class="banner3 ban"></div>
+        <div class="banner4 ban"></div>
+        <div class="banner5 ban"></div>
+        <div class="banner6 ban"></div>
+        <div class="bannerbox w">
+            <div class="user">
+                <div class="img_box">
+                    <img src="./img/userhead.png" alt="" class="userimg">
+                </div>
+                <div class="text">
+                    <p>欢迎来到</p>
+                    <p>最终幻想14</p>
+                </div>
+                <button class="userbtn" onclick="fi.click()">更改头像
+                    <input type="file" id="fi" style="display: none;">
+                </button>
+            </div>
+            <div class="num">
+                <span class="now">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <!------------------------------------------------------------------------------------ content  ---------------------------------------->
+    <a href="./shop_1.html" class="content w">
+        <img src="./img/shop_img.png" alt="">
+        <img src="./img/shop_img2.png" alt="">
+        <img src="./img/shop_img2.png" alt="">
+        <img src="./img/shop_img2.png" alt="">
+    </a>
+    <!----------------------------------------------------------------------------------- 返回顶部 ------------------------------------------->
+    <a href="#" class="forTop">
+        <div>&#xe64d;</div>
+        返回顶部
+    </a>
+    <!-- foot  -->
+    <footer>
+        <img src="./img/footer.png" alt="">
+    </footer>
+    <script>
+        /////////////////////////////////////////////////////////////// 轮播图///////////////////////////////////////////////////////
+        let banners = document.querySelectorAll('.banner .ban')
+        let nums = document.querySelectorAll('.num span')
+        let num = 0
+        let start = null
+        //  定时器函数
+        let go = function (i) {
+            document.querySelector('.now').className = ''
+            nums[i].className = 'now'
+            for (let i = 0; i < banners.length; i++) {
+                banners[i].style.display = 'none'
+            }
+            banners[i].style.display = 'block'
+        }
+
+        //  轮播图效果
+
+        start = setInterval(function () {
+            num++
+            if (num > 5) {
+                num = 0
+            }
+            go(num)
+        }, 3000)
+
+        //  鼠标进入切换图片,停留停止定时器
+
+        for (let i = 0; i < nums.length; i++) {
+            nums[i].addEventListener('mouseenter', function () {
+                go(i)
+                num = i
+                clearInterval(start)
+            })
+            nums[i].addEventListener('mouseleave', function () {
+                start = setInterval(function () {
+                    num++
+                    if (num > 5) {
+                        num = 0
+                    }
+                    go(num)
+                }, 3000)
+            })
+        }
+        ///////////////////////////////////////////////////////////// 上传头像 ////////////////////////////////////////////////////////
+        let userfile = document.querySelector('#fi')
+        let userimg = document.querySelector('.userimg')
+        userfile.addEventListener('change', function (e) {
+            let reader = new FileReader()
+            reader.readAsDataURL(this.files[0])
+            reader.addEventListener('load', function () {
+                userimg.src = reader.result
+            })
+        })
+
+        ///////////////////////////////////////////////////////////  返回顶部  ////////////////////////////////////////////////////////
+        let toTop = document.querySelector('.forTop')
+
+        window.addEventListener('scroll', function () {
+            console.log(document.documentElement.scrollTop);
+            if (document.documentElement.scrollTop >= 600) {
+                toTop.style.display = 'block'
+            } else {
+                toTop.style.display = 'none'
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+body {
+  font-family: 'iconfont';
+}
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 2409000 */
+  src: url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.eot');
+  src: url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.woff2') format('woff2'), url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.woff') format('woff'), url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.ttf') format('truetype'), url('https://at.alicdn.com/t/font_2409000_7xyogdn3218.svg#iconfont') format('svg');
+}
+
+.bigbox {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bigbox header {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.bigbox header .title {
+  position: absolute;
+  left: 110px;
+  top: 150px;
+  transform: translate(0%, -50%);
+  width: 80px;
+}
+
+.bigbox header .title img {
+  width: 100%;
+}
+
+.bigbox header .leftbox {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.bigbox header .rightbox {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bigbox header .rightbox a {
+  display: inline-block;
+  position: relative;
+  width: 94px;
+  height: 30px;
+  border: 1px solid #3f3a89;
+  color: #756aff;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.bigbox header .rightbox a:hover {
+  background: #756aff;
+  color: #333;
+}
+
+.bigbox header .rightbox a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #3f3a89;
+}
+
+.bigbox header .rightbox a::before:hover {
+  display: none;
+}
+
+.bigbox header .rightbox a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #3f3a89;
+}
+
+.bigbox header .rightbox a::after:hover {
+  display: none;
+}
+
+.bigbox header .rightbox a span {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bigbox header .rightbox a span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #3f3a89;
+}
+
+.bigbox header .rightbox a span::before:hover {
+  display: none;
+}
+
+.bigbox header .rightbox a span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #3f3a89;
+}
+
+.bigbox header .rightbox a span::after:hover {
+  display: none;
+}
+
+.bigbox header .rightbox .pay {
+  margin-left: 20px;
+}
+
+.bigbox header .logo {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.bigbox header .selectButton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: url(../img/selectDown.png);
+  width: 191px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.bigbox header .selectBox {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 3;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.bigbox header .selectBox .box {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  background-color: #2e2e2e;
+}
+
+.bigbox header .selectBox .box .left {
+  height: 100%;
+  width: 63%;
+  float: left;
+  padding: 25px 60px 30px 98px;
+}
+
+.bigbox header .selectBox .box .left .top {
+  color: #fff;
+  font-weight: 700;
+  height: 35px;
+}
+
+.bigbox header .selectBox .box .left .top .action {
+  float: left;
+}
+
+.bigbox header .selectBox .box .left .top .action span {
+  color: #666;
+}
+
+.bigbox header .selectBox .box .left .top .more {
+  float: right;
+  color: #ccc;
+}
+
+.bigbox header .selectBox .box .left .shop ul {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.bigbox header .selectBox .box .left .shop ul li:nth-child(4) {
+  margin: 0;
+}
+
+.bigbox header .selectBox .box .left .shop ul li {
+  display: inline-block;
+  margin-right: 10px;
+  height: 80%;
+}
+
+.bigbox header .selectBox .box .left .shop ul li p {
+  line-height: 30px;
+  font-weight: 700;
+  color: #b2b2b2;
+  text-align: center;
+}
+
+.bigbox header .selectBox .box .right {
+  overflow: hidden;
+  float: left;
+  background-color: #1f1f1f;
+  height: 100%;
+  width: 37%;
+}
+
+.bigbox header .selectBox .box .right img {
+  width: 100%;
+}
+
+.bigbox header .selectBox .box .selectBottom {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: url(../img/selectUp.png);
+  width: 191px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.bigbox header .options {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 470px);
+  width: 700px;
+}
+
+.bigbox header .options a {
+  position: relative;
+  color: #756aff;
+  float: left;
+  width: 190px;
+  height: 43px;
+  text-align: center;
+  line-height: 43px;
+  border: 1px solid #3f3a89;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 9px;
+  transition: all 0.3s;
+}
+
+.bigbox header .options a:hover {
+  transform: translate(0, -5px);
+}
+
+.bigbox header .options .download {
+  width: 216px;
+  height: 62px;
+  margin: 0 52px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bigbox header .options .download:hover .download_top {
+  transform: translate(0, 0);
+}
+
+.bigbox header .options .download .download_top {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 216px;
+  text-align: center;
+  height: 62px;
+  line-height: 62px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.bigbox header .options .download img {
+  width: 100%;
+  height: 100%;
+}
+
+.bigbox header .content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 140%);
+  width: 852px;
+  height: 237px;
+  background-image: url(../img/top.png);
+}
+
+.bigbox .imgbox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bigbox .imgbox img {
+  width: 100%;
+}
+
+.bigbox .videoBox {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -155px;
+}
+
+.bigbox .videoBox video {
+  height: 1000px;
+  width: 1560px;
+  overflow: hidden;
+}
+
+.bigbox .videoBox video source {
+  width: 1560px;
+}
+
+.bigbox .videoBox .imgbox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bigbox .videoBox .imgbox img {
+  position: absolute;
+  height: 100%;
+}

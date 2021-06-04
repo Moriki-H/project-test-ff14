@@ -1,0 +1,141 @@
+body {
+  position: relative;
+}
+header {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+header h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 400;
+}
+header h2 span {
+  font-weight: 700;
+}
+.error {
+  color: red;
+}
+.corr {
+  color: green;
+}
+.bigbox {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+.bigbox .top {
+  height: 49px;
+}
+.bigbox .top ul li:nth-child(3) {
+  border-right: 1px solid #c7c7c7;
+}
+.bigbox .top ul li {
+  float: left;
+}
+.bigbox .top ul li a {
+  display: block;
+  height: 50px;
+  line-height: 49px;
+  text-align: center;
+  width: 133px;
+  color: #333;
+  font-size: 16px;
+}
+.bigbox .before {
+  border: 1px solid #c7c7c7;
+  border-bottom: 1px solid #e5004f;
+  border-right: none;
+}
+.bigbox .now {
+  border: 1px solid #e5004f;
+  border-bottom: none;
+  color: #e5004f !important;
+}
+.bigbox .bottom {
+  margin-top: -1px;
+  border: 1px solid #e5004f;
+  border-top: none;
+  padding: 0 28px;
+  overflow: hidden;
+}
+.bigbox .bottom div:nth-child(1) {
+  margin-top: 30px;
+}
+.bigbox .bottom p {
+  height: 30px;
+  line-height: 30px;
+}
+.bigbox .bottom .ip {
+  border: 1px solid #c7c7c7;
+  padding: 10px 0;
+  width: 100%;
+}
+.bigbox .bottom .ip input {
+  text-indent: 1.5em;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+}
+.bigbox .bottom .test {
+  padding: 0;
+  height: 40px;
+}
+.bigbox .bottom .test input {
+  float: left;
+  margin: 10px 0;
+  width: 60%;
+}
+.bigbox .bottom .test button {
+  float: right;
+  z-index: 1;
+  height: 40px;
+  width: 38%;
+  background: #c7c7c7;
+  color: #666;
+  cursor: pointer;
+}
+.bigbox .bottom h5 {
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+}
+.bigbox .bottom .ip1 {
+  border: none;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.bigbox .bottom .ip1 span {
+  float: left;
+  color: #e5004f;
+  height: 40px;
+  line-height: 40px;
+  width: 40%;
+  text-align: center;
+}
+.bigbox .bottom .ip1 .login {
+  float: right;
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #e5004f;
+  color: #fff;
+  cursor: pointer;
+}
+.bigbox .emale {
+  display: none;
+}
+.bigbox .style {
+  display: none;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer img {
+  width: 100%;
+}

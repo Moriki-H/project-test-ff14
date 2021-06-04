@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./material/normalize.css">
+    <link rel="stylesheet" href="./CSS/shop_1.css">
+</head>
+
+<body>
+    <header>
+        <!---------------------------------------------------------------- head  ------------------------------------------------------->
+        <div class="head_top w">
+            <ul class="fr">
+                <li class="fl">盛趣游戏商城欢迎您, 请<a href="./login.html"> 登录</a></li>
+                <li class="fl"><a href="./login.html">免费注册</a></li>
+                <li class="fl"><a href="">帮助中心</a></li>
+            </ul>
+        </div>
+        <div class="head_bottom w">
+            <div class="head_left fl">
+                <h1 class="fl"><a href="./shop.html"><img src="./img/shop_logo1.png" alt=""></a></h1>
+                <h2 class="fl"><a href="./index.html"><img src="./img/shop_logo2.png" alt=""></a></h2>
+            </div>
+            <div class="head_right fr">
+                <div class="search fl">
+                    <input type="text" placeholder="请输入关键字" class="fl">
+                    <div class="icon fr"><a href="">&#xe624;</a></div>
+                </div>
+                <div class="buy fr">
+                    <div class="buy_left fl"><a href=""><i>&#xe656;</i>购物车</a></div>
+                    <div class="buy_right fl"><a href="">&#xe658;</a></div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------- nav  -------------------------------------------------------->
+        <div class="nav">
+            <ul class="w">
+                <li class="fl"><a href="" style="color: #fff;">最终幻想14</a></li>
+                <li class="fl"><a href="">虚拟道具</a></li>
+                <li class="fl"><a href="">实物周边</a></li>
+                <li class="fl"><a href="">个人中心</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!----------------------------------------------- content  ------------------------------------------------------->
+    <div class="content">
+
+        <div class="top">
+
+            <div class="left fl">
+
+                <div class="left_top">
+                    <!-- img  -->
+                    <img src="./img/shop_cont1.jpg" alt="" style="display: block;">
+                    <img src="./img/shop_cont2.jpg" alt="">
+                    <img src="./img/shop_cont3.jpg" alt="">
+                    <img src="./img/shop_cont4.jpg" alt="">
+                    <!-- yellowBox -->
+                    <div class="yellowBox" style="display: none;"></div>
+                </div>
+
+
+                <div class="left_bottom">
+                    <!-- small img -->
+                    <div class="shop_cont fl active"><img src="./img/shop_cont1.jpg" alt=""></div>
+                    <div class="shop_cont fl"><img src="./img/shop_cont2.jpg" alt=""></div>
+                    <div class="shop_cont fl"><img src="./img/shop_cont3.jpg" alt=""></div>
+                    <div class="shop_cont fl"><img src="./img/shop_cont4.jpg" alt=""></div>
+                </div>
+
+            </div>
+
+
+
+            <div class="right fr">
+                <!-- bimg  -->
+                <div class="Bimg">
+                    <img src="./img/shop_cont1.jpg" alt="" style="display: block;">
+                    <img src="./img/shop_cont2.jpg" alt="">
+                    <img src="./img/shop_cont3.jpg" alt="">
+                    <img src="./img/shop_cont4.jpg" alt="">
+                </div>
+
+                <h5 class="title">山间少女套</h5>
+                <div class="price"><b>售价</b>
+                    <span>12800</span>
+                    <i>点券</i>
+                </div>
+                <div class="title2">山间少女套</div>
+                <div class="attribute">默认属性 <span>标准</span></div>
+                <div class="buy_num">选择数量
+                    <div class="num">
+                        <button class="jia fl">+</button>
+                        <i>1</i>
+                        <button class="jian fr">-</button>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="buycar fl">加入购物车</div>
+                    <div class="buynow fl">立即购买</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="./img/shop_footer.png" alt="">
+        </div>
+    </div>
+
+    <!------------------------------------------------- foot  --------------------------------------------------------->
+    <footer>
+        <img src="./img/footer.png" alt="">
+    </footer>
+    <script>
+
+        let left_top = document.querySelector('.left_top')
+        let yellowBox = document.querySelector('.yellowBox')
+        let Bimgs = document.querySelectorAll('.Bimg img')
+        let BIMG = document.querySelector('.Bimg')
+        let mouseX = 0
+        let mouseY = 0
+        let o = 0
+        let shop_conts = document.querySelectorAll('.shop_cont')
+        let imgs = document.querySelectorAll('.left_top img')
+        //////////////////////////////////////////鼠标经过切换图片////////////////////////////////////////
+        console.log(shop_conts, imgs, Bimgs);
+        for (let i = 0; i < shop_conts.length; i++) {
+            shop_conts[i].addEventListener('mouseenter', function () {
+                document.querySelector('.active').className = 'shop_cont fl'
+                this.className = 'shop_cont fl active'
+                for (let j = 0; j < imgs.length; j++) {
+                    imgs[j].style.display = 'none'
+                }
+                imgs[i].style.display = 'block'
+                o = i
+            })
+        }
+        ///////////////////////////////////////////放大镜////////////////////////////////////////////
+        left_top.addEventListener('mouseenter', function () {
+            left_top.style.cursor = 'move'
+            yellowBox.style.display = 'block'
+            Bimgs[o].style.display = 'block'
+            BIMG.style.display = 'block'
+        })
+        left_top.addEventListener('mouseleave', function () {
+            yellowBox.style.display = 'none'
+            Bimgs[o].style.display = 'none'
+            BIMG.style.display = 'none'
+        })
+        left_top.addEventListener('mousemove', function (e) {
+            mouseX = e.pageX - left_top.offsetLeft - yellowBox.offsetWidth / 2
+            mouseY = e.pageY - left_top.offsetTop - yellowBox.offsetHeight / 2
+            if (mouseX <= 0) {
+                mouseX = 0
+            } else if (mouseX >= left_top.offsetWidth - yellowBox.offsetWidth) {
+                mouseX = left_top.offsetWidth - yellowBox.offsetWidth
+            }
+            yellowBox.style.left = mouseX + 'px'
+            yellowBox.style.top = mouseY + 'px'
+            Bimgs[o].style.left = -1 * mouseX + 'px'
+            Bimgs[o].style.top = -1 * mouseY + 'px'
+        })
+        //////////////////////////////////////////加减按钮//////////////////////////////////////
+        let jia = document.querySelector('.jia')
+        let jian = document.querySelector('.jian')
+        let num = document.querySelector('.num')
+        let num_i = document.querySelector('.num i')
+        let one = 1
+        jia.addEventListener('click', function () {
+            one++
+            num_i.innerHTML = one
+            if (one >= 10) {
+                jia.disabled = true
+                jia.style.cursor = 'not-allowed'
+                jian.style.cursor = 'pointer'
+            } else {
+                jia.disabled = false
+                jian.disabled = false
+                jia.style.cursor = 'pointer'
+                jian.style.cursor = 'pointer'
+            }
+        })
+        jian.addEventListener('click', function () {
+            one--
+            num_i.innerHTML = one
+            if (one == 1) {
+                jian.disabled = true
+                jian.style.cursor = 'not-allowed'
+
+            } else {
+                jia.disabled = false
+                jia.style.cursor = 'pointer'
+                jian.disabled = false
+                jian.style.cursor = 'pointer'
+            }
+        })
+
+    </script>
+</body>
+
+</html>

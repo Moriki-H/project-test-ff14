@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 盛趣游戏通行证</title>
+    <link rel="stylesheet" href="./material/normalize.css">
+    <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+    <!-- ---------------------------------------------------------logo模块-------------------------------------------------------------------- -->
+    <header>
+        <h1>
+            <a href="./index.html">
+                <img src="./img/logo_login.png" alt="">
+            </a>
+        </h1>
+        <h2>一个账号,尽情玩转<span>盛趣游戏!</span></h2>
+    </header>
+
+    <!-- ---------------------------------------------------------验证模块---------------------------------------------------------------------------------- -->
+    <div class="bigbox">
+        <!-- tab栏 -->
+        <div class="top">
+            <ul>
+                <li><a href="javascript:;" class="now" id="phone">手机注册</a></li>
+                <li><a href="javascript:;" class="before" id="emale">邮箱注册</a></li>
+                <li><a href="javascript:;" class="before" id="style">个性注册</a></li>
+            </ul>
+        </div>
+        <!-- 手机注册 -->
+        <div class="bottom phone">
+            <div class="ip"><input type="text" placeholder="手机号码 (必须填写)" class="phone_input"></div>
+            <p>11位数字</p>
+            <div class="ip test"><input type="text" placeholder="短信验证码 (必须填写)" class="test">
+                <button>免费获取验证码</button>
+            </div>
+            <p>请填写短信中的6位数字</p>
+            <div class="ip"><input type="text" placeholder="静态密码 (必须填写)" class="password_input"></div>
+            <p>6-30位字母或数字</p>
+            <div class="ip"><input type="text" placeholder="邮箱 (必须填写)" class="emale_input"></div>
+            <p>只支持后缀名为.com的邮箱</p>
+            <div class="ip1"><span>用户服务协议</span>
+                <button class="login">接受协议并注册</button>
+            </div>
+        </div>
+        <!--------------------------------------------------------- 邮箱注册 ------------------------------------------------------------------>
+        <div class="bottom emale">
+            <div class="ip"><input type="text" placeholder="邮箱 (必须填写)" class="emale_input"></div>
+            <p>只支持后缀名为.com的邮箱</p>
+            <div class="ip"><input type="text" placeholder="静态密码 (必须填写)" class="password_input"></div>
+            <p>6-30位字母或数字</p>
+            <h5>手机验证</h5>
+            <div class="ip"><input type="text" placeholder="手机号码 (必须填写)" class="phone_input"></div>
+            <p>11位数字</p>
+            <div class="ip test"><input type="text" placeholder="短信验证码 (必须填写)" class="test">
+                <button>免费获取验证码</button>
+            </div>
+            <p>请填写短信中的6位数字</p>
+            <div class="ip1"><span>用户服务协议</span>
+                <button class="login">接受协议并注册</button>
+            </div>
+        </div>
+        <!---------------------------------------------------------- 个性注册 ---------------------------------------------------------------------->
+        <div class="bottom style">
+            <div class="ip"><input type="text" placeholder="个性账号 (必须填写)" class="style_input"></div>
+            <p>4-16位字母或数字,首位为字母</p>
+            <div class="ip"><input type="text" placeholder="静态密码 (必须填写)" class="password_input"></div>
+            <p>6-30位字母或数字</p>
+            <h5>手机验证</h5>
+            <div class="ip"><input type="text" placeholder="手机号码 (必须填写)" class="phone_input"></div>
+            <p>11位数字</p>
+            <div class="ip test"><input type="text" placeholder="短信验证码 (必须填写)" class="test">
+                <button>免费获取验证码</button>
+            </div>
+            <p>请填写短信中的6位数字</p>
+            <div class="ip1"><span>用户服务协议</span>
+                <button class="login">接受协议并注册</button>
+            </div>
+        </div>
+
+
+        <!------------------------------------------------------ tab栏切换与正则功能 ------------------------------------------------------------------>
+        <script>
+
+            ///////////////////////////////////////////////////////////////////// tab栏切换////////////////////////////////////////////////////////
+            let btns = document.querySelectorAll('.top li a')
+            let logins = document.querySelectorAll('.bottom')
+                ; (function tab() {
+                    for (let i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener('click', function () {
+                            document.querySelector('.now').className = 'before'
+                            this.className = 'now'
+                            for (let j = 0; j < logins.length; j++) {
+                                logins[j].style.display = 'none'
+                            }
+                            logins[i].style.display = 'block'
+                        })
+                    }
+                }())
+
+            //////////////////////////////////////////////////////////////////////// 正则/////////////////////////////////////////////////////////////
+            let phone_input = document.querySelectorAll('.phone_input')
+            let password_input = document.querySelectorAll('.password_input')
+            let emale_input = document.querySelectorAll('.emale_input')
+            let text = document.querySelectorAll('.test')
+            let style_input = document.querySelector('.style_input')
+            let reg_phone = /^[1][3-9][0-9]{9}$/
+            let reg_password = /^[a-zA-Z0-9]{6,30}$/
+            let reg_emale = /.com$/
+            let reg_text = /[0-9]{6}/
+            let reg_style = /^[a-zA-Z][a-zA-Z0-9]{4,16}$/
+                ; (function reg() {
+                    for (let i = 0; i < phone_input.length; i++) {
+                        phone_input[i].addEventListener('blur', function () {
+                            if (reg_phone.test(phone_input[0].value) || reg_phone.test(phone_input[1].value) || reg_phone.test(phone_input[2].value)) {
+                                phone_input[i].parentElement.nextElementSibling.innerHTML = '正确'
+                                phone_input[i].parentElement.nextElementSibling.className = 'corr'
+                            } else {
+                                phone_input[i].parentElement.nextElementSibling.innerHTML = '请重新输入'
+                                phone_input[i].parentElement.nextElementSibling.className = 'error'
+                            }
+                        })
+                    }
+                    for (let j = 0; j < password_input.length; j++) {
+                        password_input[j].addEventListener('blur', function () {
+                            if (reg_password.test(password_input[0].value) || reg_password.test(password_input[1].value) || reg_password.test(password_input[2].value)) {
+                                password_input[j].parentElement.nextElementSibling.innerHTML = '正确'
+                                password_input[j].parentElement.nextElementSibling.className = 'corr'
+                            } else {
+                                password_input[j].parentElement.nextElementSibling.innerHTML = '请重新输入'
+                                password_input[j].parentElement.nextElementSibling.className = 'error'
+                            }
+                        })
+                    }
+                    for (let k = 0; k < emale_input.length; k++) {
+                        emale_input[k].addEventListener('blur', function () {
+                            if (reg_emale.test(emale_input[0].value) || reg_emale.test(emale_input[1].value)) {
+                                emale_input[k].parentElement.nextElementSibling.innerHTML = '正确'
+                                emale_input[k].parentElement.nextElementSibling.className = 'corr'
+                            } else {
+                                emale_input[k].parentElement.nextElementSibling.innerHTML = '请重新输入'
+                                emale_input[k].parentElement.nextElementSibling.className = 'error'
+                            }
+                        })
+                    }
+                    for (let l = 0; l < text.length; l++) {
+                        text[l].addEventListener('blur', function () {
+                            if (reg_text.test(text[0].value) || reg_text.test(text[1].value) || reg_text.test(text[2].value)) {
+                                text[l].parentElement.nextElementSibling.innerHTML = '正确'
+                                text[l].parentElement.nextElementSibling.className = 'corr'
+                            } else {
+                                text[l].parentElement.nextElementSibling.innerHTML = '请重新输入'
+                                text[l].parentElement.nextElementSibling.className = 'error'
+                            }
+                        })
+                    }
+                    style_input.addEventListener('blur', function () {
+                        if (reg_style.test(style_input.value)) {
+                            style_input.parentElement.nextElementSibling.innerHTML = '正确'
+                            style_input.parentElement.nextElementSibling.className = 'corr'
+                        } else {
+                            style_input.parentElement.nextElementSibling.innerHTML = '请重新输入'
+                            style_input.parentElement.nextElementSibling.className = 'error'
+                        }
+                    })
+                }())
+
+            ///////////////////////////////////////////////////////////// 定时器获取验证码//////////////////////////////////////////////////////
+            let btn_test = document.querySelectorAll('.test button')
+            let time = null
+            let start = null
+            for (let i = 0; i < btn_test.length; i++) {
+                btn_test[i].addEventListener('click', function () {
+                    let num = 5
+                    time = function () {
+                        btn_test[i].innerHTML = `${num}秒后重新获取`
+                        num--
+                        start = setTimeout(time, 1000)
+                        btn_test[i].disabled = true
+                        if (num <= -1) {
+                            clearTimeout(start)
+                            btn_test[i].disabled = false
+                            btn_test[i].innerHTML = `重新获取`
+                        }
+                    }
+                    time()
+                })
+            }
+        </script>
+
+
+
+
+        <!-------------------------------------------------------------------------- 底部 ------------------------------------------------------------>
+        <footer>
+            <img src="./img/footer_login.png" alt="">
+        </footer>
+</body>
+
+</html>
